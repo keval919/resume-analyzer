@@ -1,0 +1,30 @@
+{% extends 'admin/base.html' %}
+{% block title %}
+    DataBase Entry
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='admin/css/db_entry.css') }}">
+{% endblock css %}
+
+{% block body %}
+<div class="main">
+    <div id="main-box">
+        <div id="form-db">
+        <form>
+            <div id="job-role">
+                <label>Job Role:</label><br>
+                <input type="text">
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+
+
+
+{% block js %}
+<script src="{{ url_for('static', filename='admin/js/db_entry.js') }}"></script>
+{% endblock js %}

@@ -1,0 +1,31 @@
+{% extends 'user/home_base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block css %}
+
+
+{% endblock css %}
+
+
+{% block body %}
+<div id="first-div">
+
+<div id="doc-scan-ani-box">
+    <div id="doc">
+        <div id="scan-bar"></div>
+        <div id="doc-content"><p>Scan Your<br>Resume Now</p></div>
+    </div>
+</div>
+
+<div id="scanner"></div><a href="/signup"><div id="scan-box"><p>Scan Now</p></div></a>
+
+</div>
+{% endblock body %}
+
+
+
+{% block js %}
+<script src="{{ url_for('static', filename='user/js/user_signup_login.js') }}"></script>
+{% endblock js %}

@@ -1,0 +1,177 @@
+#first-div{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    bottom: 1vw;
+}
+/* doc scan animation */
+#doc-scan-ani-box{
+    width: 30vw;
+    height: 36vw;
+    margin-left: 5vw;
+    margin-top: 0.55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#doc{
+    width: 95%;
+    height: 90%;
+    background-image: linear-gradient(to left,rgb(128, 0, 255,0.25), rgb(128, 0, 255,0.05));
+    border-radius: 0.5vw;
+    transform: skewY(15deg) rotateY(65deg) rotateX(7deg);
+    border: 0.1vw solid rgb(128, 0, 255);
+    border-right: none;
+    border-left:  0.2vw solid rgb(128, 0, 255);;
+    position: relative;
+    left:2vw;
+    color: rgb(128, 0, 255);
+    font-size: 3vw;
+    overflow: hidden;
+    animation: scan-flash 2s linear;
+    animation-delay: 0.5s;
+}
+#scan-box{
+    width: 8vw;
+    height: 3.5vw;
+    border: 0.1vw solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 1vw rgb(128, 0, 255) inset,0 0 0.7vw rgb(128, 0, 255);
+    position: relative;
+    right: 11.5vw;
+    top:2.5vw;
+}
+#scanner{
+    height: 39vw;
+    width: 25vw;
+    clip-path: polygon(0 8%, 1% 100%, 100% 55%);
+    background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0));
+    position: relative;
+    top:0.7vw;
+    right: 8.2vw;
+    transform: rotate(0.4deg);
+    animation: scan-light-flash 2s linear;
+    animation-delay: 0.5s;
+}
+
+#doc-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99.75%;
+    width: 100%;
+    color: rgb(0, 191, 255);
+    animation: scan-flash 2s linear;
+    animation-delay: 0.5s;
+}
+
+#scan-bar{
+    position: relative;
+    height:0.15%;
+    width: 100%;
+    animation: scan-bar-scanning 7s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes scan-flash {
+    0%{
+        border: none;
+        color: black;
+        background-image: linear-gradient(to right,rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    }
+    16.66%{
+        border: 0.1vw solid rgb(128, 0, 255);
+        border-right: none;
+        color: rgb(128, 0, 255);
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.25), rgb(128, 0, 255,0.05));
+    }
+    33.32%{
+        border: none;
+        color: black;
+        background-image: linear-gradient(to right,rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    }
+    49.98%{
+        border: 0.1vw solid rgb(128, 0, 255);
+        border-right: none;
+        color: rgb(128, 0, 255);
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.25), rgb(128, 0, 255,0.05));
+    }
+    66.64%{
+        border: none;
+        color: black;
+        background-image: linear-gradient(to right,rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    }
+    100%{
+        border: 0.1vw solid rgb(128, 0, 255);
+        border-right: none;
+        color: rgb(128, 0, 255);
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.25), rgb(128, 0, 255,0.05));
+    }
+}
+/*
+@keyframes scan-bar-flash {
+    0%{
+        background-color: black;
+    }
+    16.66%{
+        background-color: rgb(128, 0, 255);
+    }
+    33.32%{
+        background-color: black;
+    }
+    49.98%{
+        background-color: rgb(128, 0, 255);
+    }
+    66.64%{
+        background-color: black;
+    }
+    100%{
+        background-color: rgb(128, 0, 255);
+    }
+}
+*/
+@keyframes scan-light-flash {
+    0%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0) 50%);
+    }
+    16.66%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0));
+    }
+    33.32%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0) 50%);
+    }
+    49.98%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5) , rgba(0, 0, 0, 0));
+    }
+    66.64%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0) 50%);
+    }
+    100%{
+        background-image: linear-gradient(to left,rgb(128, 0, 255,0.5), rgba(0, 0, 0, 0));
+    }
+}
+
+@keyframes scan-bar-scanning {
+    0%{
+        background-color: rgb(128, 0, 255);
+        position: relative;
+        top:5%
+    }
+    50%{
+        background-color: rgb(128, 0, 255);
+        position: relative;
+        top:95%
+    }
+    100%{
+        background-color: rgb(128, 0, 255);
+        position: relative;
+        top:5%
+    }
+}

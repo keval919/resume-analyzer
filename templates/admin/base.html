@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFit-{% block title %}
+        
+        {% endblock title %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='admin/css/head.css') }}">
+        {% block css %}
+        
+    {% endblock css %}
+</head>
+<body>
+
+    <div class="title"><a href="/admin"><p class="title_head">JobFit</p></a>
+        <a href="/db_show" class="db_button"><div>Show D/B</div></a>
+        <a href="/db_entry" class="db_button"><div>Entry D/B</div></a>
+        <a href="/logout" class="logout_button"><div>Logout</div></a>
+    </div>
+    <hr>
+
+    {% block body %}
+
+
+    {% endblock body %}
+
+    {% block js %}
+        
+    {% endblock js %}
+    
+</body>
+</html>

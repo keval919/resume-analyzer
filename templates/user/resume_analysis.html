@@ -1,0 +1,94 @@
+{% extends 'user/user_base.html' %}
+{% block title %}
+Resume anaysis
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='user/css/resume_analysis.css') }}">
+{% endblock css %}
+
+
+{% block body %}
+<div id="resume-show">
+    <div id="left-shift" class="page-shift">Prev</div>
+    <div id="resume-container"><canvas id="resume-render-canvas"></canvas></div>
+    <div id="right-shift" class="page-shift">Next</div>
+
+</div>
+<div id="analysis-box">
+<div id="ana-heading"><h1>analysis</h1></div>
+<div id="analysis">
+    <div id="analysis-titles">
+        <h2>(Click For Show Analysis)</h2>
+        <div id="personal-info">
+            <p class="main-titles">Personal Information:</p>
+            <div id="sub-titles">
+                <p id="name">> Name</p></li>
+                <p id="email">> Email</p>
+                <p id="phno">> Phone Number</p>
+            </div>
+        </div>
+
+        <div id="req_keywords">
+            <p class="main-titles">Keywords:</p>
+            <div id="sub-titles">
+                <p id="present-keywords">> Suggested Keywords</p>
+            </div>
+        </div>
+
+        <div id="skills">
+            <p class="main-titles">Technical:</p>
+            <div id="sub-titles">
+                <p id="sfrj">> Skills For Required Job</p>
+                <p id="jsoycs">> Job Suggested On Your Current Skills</p>
+            </div>
+        </div>
+
+        <div id="ats-score"><br>
+            <p class="main-titles">ATS Score:<p id="score"></p></p>
+        </div>
+        </div>
+
+        <div id="analysis-side">
+            <div class="inner-analysis-show" id="name-analaysis">
+                <h1 id="name-h1"></h1>
+                <p id="name-tips"></p>
+            </div>
+            <div class="inner-analysis-show" id="email-analaysis">
+                <h1 id="email-h1"></h1>
+                <p id="email-tips"></p>
+            </div>
+            <div class="inner-analysis-show" id="phone-number-analaysis">
+                    <h1 id="pn-h1"></h1>
+                    <p id="pn-tips"></p>
+            </div>
+            <div class="inner-analysis-show" id="present-keywords-analaysis">
+                <h1 id="present-keywords-h1">Leadership:</h1>
+                <p id="leadership-tips"></p>
+                <h1 id="skills-h1">Skills:</h1>
+                <p id="skills-key-tips"></p>
+                <h1 id="action_verbs-h1">Action_verbs:</h1>
+                <p id="action_verbs-tips"></p>
+            </div>
+            <div class="inner-analysis-show" id="skills-analaysis">
+                <h1>Required Skills:</h1>
+                <p id="skills-tips"></p>
+            </div>
+            <div class="inner-analysis-show" id="job-analaysis">
+                <h1>On base on your reseme you can get job:</h1>
+                <p id="job-tips"></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+{% endblock body %}
+
+
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script src="{{ url_for('static', filename='user/js/resume_analysis.js') }}"></script>
+{% endblock js %}

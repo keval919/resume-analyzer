@@ -1,0 +1,41 @@
+{% extends 'user/base.html' %}
+{% block title %}
+SignUp
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='user/css/user_signup.css') }}">
+{% endblock css %}
+
+
+{% block body %}
+
+<div id="main">
+<div id="main-box" onclick="button_shake()">
+    <div id="main-box-inner"><p id="heading">Sign Up</p>
+          <div id="form-box">
+            <form action="/signup" method="POST">
+            <div class="inputs">
+                <label>Username:</label>
+                <input type="text" name="username" autocomplete="off">
+            </div>
+            <div class="inputs">
+                <label>Password:</label>
+                <input type="password" name="pass">
+            </div>
+            <div class="inputs">
+                <label>Re-Password:</label>
+                <input type="password" name="rpass">
+            </div>
+            <button id="signup-button">SignUp</div>
+            </form>
+    </div>
+</div>
+</div>
+</div>
+
+{% endblock body %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='user/js/user_signup_login.js') }}"></script>
+{% endblock js %}

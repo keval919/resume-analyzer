@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+#main{
+    height: 40vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#main-box{
+    width: 39vw;
+    height: 39vw;
+    /*border-radius: 69% 64% 67% 64%;*/
+    border-radius: 69% 64% 70% 64%;
+    animation: ani 10s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12.5vw 2vw rgb(128, 0, 255) inset,0 0 2.5vw 1vw rgb(255, 255, 255) inset;
+    border: 0.15vw solid white;
+    overflow: hidden;
+    transition: width 3s;
+}
+@keyframes ani {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#main-box-inner{
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 3vw;
+    animation: ani2 10s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@keyframes ani2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+#heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-shadow: 0 0 0.5vw #ffffff;
+ }
+
+ #form-box{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+ }
+ #form-box form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+ .inputs{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    width: 100%;
+    margin: 0.5vw;
+ }
+ .inputs input{
+    width: 100%;
+    font-size: 1.5vw;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    padding: 0.25vw;
+    border: 0.05vw solid white;
+    padding-left: 0.7vw;
+    border: none;
+    border-radius: 0;
+    border-bottom:  0.05vw solid white;
+    outline: none;
+ }
+ #signup-button{
+    width: 45%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 1.5vw;
+    margin: 1vw;
+    border: 0.025vw solid white;
+    border-radius: 0.7vw;
+    box-shadow: 0 0 0.01vw 0.1vw rgb(128, 0, 255) inset;
+    transition: width 0.5s,height 0.5s,text-shadow 0.5s;
+    background-color: transparent;
+    color: white;
+ }
+ .inputs:hover{
+    text-shadow: 0 0 0.5vw #ffffff;
+ }
+ .inputs:hover input{
+    border-bottom:  0.15vw solid white;
+ }
+
+ #signup-button:hover{
+    text-shadow: 0 0 0.5vw #ffffff;
+    border: 0.1vw solid white;
+    width: 47%;
+    height: 13%;
+ }
+ #main-box:active{
+    width: 5vw;
+ }
+#water{
+    background-color: aqua;
+    position: relative;
+}
+

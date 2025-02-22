@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFit-{% block title %}
+        
+        {% endblock title %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='user/css/head.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user/css/user.css') }}">
+        {% block css %}
+        
+    {% endblock css %}
+</head>
+<body>
+
+    <div class="title">
+        <a href="/user"><p class="title_head">JobFit</p></a>
+        <div id="head-buttons-container">
+            <a href="/logout"><div class="head-buttons" id="logout-button"><p>Log Out</p></div></a>
+        </div>
+    </div>
+
+
+    {% block body %}
+
+
+    {% endblock body %}
+
+    {% block js %}
+        
+    {% endblock js %}
+    
+</body>
+</html>
